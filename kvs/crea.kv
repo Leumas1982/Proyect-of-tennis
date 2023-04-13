@@ -1,0 +1,58 @@
+<CreaScreen>:
+    name: "crea"
+    MDBoxLayout:
+        md_bg_color: 1, 1, 1, 1
+        orientation:'vertical'
+        padding: [dp(10), dp(10),dp(10),dp(10)]
+        MDFlatButton:
+            text: "Back"
+            theme_text_color: "Custom"
+            text_color: "black"
+            on_release: app.root.current = "start"
+        AsyncImage:
+            source: 'assets/imgs/deadpool-2_50e21_1440x2960.jpg'
+            size_hint: 1,1
+            pos_hint: {'center_x':.43,'center_y':2}
+        MDLabel:
+            text: "Create a new account"
+            size_hint_y: .1
+            theme_text_color: 'Custom'
+            color: 0/255, 0/255, 0/255
+            font_size: '20sp'
+            halign: "center"
+            bold: True
+        MDTextField:
+            hint_text: "Username"
+            required: True
+            line_color_normal: "green"
+            helper_text_mode: 'on_error'
+            helper_text: "Enter new username"
+            helper_text_color_normal: "green"
+        
+        MDTextField:
+            hint_text: "Password"
+            required: True
+            line_color_normal: "green"
+            helper_text_mode: 'on_error'
+            helper_text: "Enter new password"
+            icon_right: 'eye-off'
+            password:True
+            helper_text_color_normal: "green"
+        MDTextField:
+            hint_text: "Again enter password"
+            required: True
+            line_color_normal: "green"
+            helper_text_mode: 'on_error'
+            helper_text: "Again enter password"
+            icon_right: 'eye-off'
+            password:True
+            helper_text_color_normal: "green"
+        MDFillRoundFlatButton:
+            text: "Log in"
+            size_hint_y: .025
+            size_hint_x: 1
+            theme_text_color: 'Custom'
+            background_color: 87/255, 142/255, 229/255, 1
+            halign: "center"
+            on_release: app.root.current = "start"
+        
